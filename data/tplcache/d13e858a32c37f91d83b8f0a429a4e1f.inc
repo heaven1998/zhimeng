@@ -1,0 +1,1 @@
+<li> <a href="[field:arcurl/]" target="_blank" class="img" title="[field:title/]"> <img data-original="[field:picname/]" class="cover-image" style='height:200px;' alt="[field:title/]"> </a> <a href="[field:arcurl/]" target="_blank" class="txt" title="[field:title/]">[field:title/]</a> </li>

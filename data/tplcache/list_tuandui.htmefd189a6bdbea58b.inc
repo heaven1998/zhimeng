@@ -1,0 +1,43 @@
+<?php
+$z[0]=Array("global","",93,121);
+$z[0][4]=array();
+$z[0][4]['name']="cfg_soft_lang";
+$z[1]=Array("field","",189,208);
+$z[1][4]=array();
+$z[1][4]['name']="title";
+$z[2]=Array("global","",209,235);
+$z[2][4]=array();
+$z[2][4]['name']="cfg_webname";
+$z[3]=Array("field","",276,305);
+$z[3][4]=array();
+$z[3][4]['name']="keywords";
+$z[4]=Array("field","",345,403);
+$z[4][4]=array();
+$z[4][4]['name']="description";
+$z[4][4]['function']="html2text(@me)";
+$z[5]=Array("include","",1123,1158);
+$z[5][4]=array();
+$z[5][4]['filename']="head.htm";
+$z[6]=Array("field","",1281,1331);
+$z[6][4]=array();
+$z[6][4]['name']="typeid";
+$z[6][4]['function']="gettoptype(@me,id)";
+$z[7]=Array("field","",1361,1411);
+$z[7][4]=array();
+$z[7][4]['name']="typeid";
+$z[7][4]['function']="gettoptype(@me,id)";
+$z[8]=Array("field","",1613,1642);
+$z[8][4]=array();
+$z[8][4]['name']="typename";
+$z[9]=Array("channel","\r\n          <li> <a href=\"[field:typeurl/]\" class=\"link \">[field:typename/]</a> </li>\r\n          ",1903,2146);
+$z[9][4]=array();
+$z[9][4]['type']="son";
+$z[9][4]['currentstyle']="<li><a href='~typelink~' class='link active'>~typename~</a> </li>";
+$z[10]=Array("list","\r\n        <li class=\"team_item\" > <a href=\"[field:arcurl/]\" title=\"[field:title/]\" target='_self'>\r\n          <div class=\"team_img\"> <img src=\"[field:picname/]\" alt=\"[field:title/]\"> </div>\r\n          <div class=\"wrap\">\r\n            <div><span class=\"h\"></span><span class=\"v\"></span></div>\r\n          </div>\r\n          </a>\r\n          <div class=\"team_info\">\r\n            <p class=\"title\">[field:title/]</p>\r\n            <p class=\"subtitle\">[field:shorttitle/]</p>\r\n            <p class=\"desc\">[field:description function=\"cn_substr(@me,320)\"/]...</p>\r\n          </div>\r\n        </li>\r\n        ",2392,3024);
+$z[10][4]=array();
+$z[10][4]['pagesize']="8";
+$z[11]=Array("include","",3158,3195);
+$z[11][4]=array();
+$z[11][4]['filename']="footer.htm";
+
+?>

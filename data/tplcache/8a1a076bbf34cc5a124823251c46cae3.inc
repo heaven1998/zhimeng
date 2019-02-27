@@ -1,0 +1,3 @@
+{dede:pagestyle maxwidth='800' pagepicnum='12' ddmaxwidth='200' row='3' col='4' value='2'/}
+{dede:img ddimg='/uploads/allimg/190122/1-1Z122203K2.jpg' text='' width='1280' height='720'} /uploads/allimg/190122/1-1Z122203K2.jpg {/dede:img}
+{dede:img ddimg='/uploads/allimg/190122/1-1Z122203K5.jpg' text='' width='1280' height='720'} /uploads/allimg/190122/1-1Z122203K5.jpg {/dede:img}

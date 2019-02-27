@@ -1,0 +1,11 @@
+<?php
+$z[0]=Array("field","(@me==\"\")? @me=\"active\":@me=\"\";",859,940);
+$z[0][4]=array();
+$z[0][4]['name']="typeid";
+$z[0][4]['runphp']="yes";
+$z[1]=Array("channelartlist","\r\n          <li class=\"dropdown margin-left-30\"> <a \r\n							class=\"{dede:field name=typeid runphp=\"yes\"}\r\nglobal \$dsql;\r\n\$sql = \"SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 \";\r\n\$row = \$dsql->GetOne(\$sql);\r\n            @me=is_array(\$row)?'dropdown-toggle':'';\r\n            {/dede:field} animation-zoomIn link {dede:field.currentstyle/}\"  \r\n            {dede:field name=typeid runphp=\"yes\"}\r\n            global \$dsql;\r\n            \$sql = \"SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 \";\r\n            \$row = \$dsql->GetOne(\$sql);\r\n            @me=is_array(\$row)?'data-toggle=\"dropdown\" \r\n            data-hover=\"dropdown\"\r\n            aria-expanded=\"false\" \r\n            role=\"button\" ':'';\r\n            {/dede:field}\r\n            \r\n            href=\"{dede:field name='typeurl'/}\" \r\n            \r\n            >{dede:field name='typename'/} {dede:field name=typeid runphp=\"yes\"}\r\n            global \$dsql;\r\n            \$sql = \"SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 \";\r\n            \$row = \$dsql->GetOne(\$sql);\r\n            @me=is_array(\$row)?'<i class=\"fa fa-angle-down\"></i>':'';\r\n            {/dede:field}</a>\r\n            <ul {dede:field name=typeid runphp=\"yes\"}\r\nglobal \$dsql;\r\n\$sql = \"SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 \";\r\n\$row = \$dsql->\r\n              GetOne(\$sql);\r\n              @me=is_array(\$row)?'class=\"dropdown-menu dropdown-menu-right bullet \" role=\"menu\"':'style=\"display:none\"';\r\n              {/dede:field} >\r\n              {dede:channel type='son'}\r\n              <li class=\"animation-fade animation-delay-\"><a href=\"[field:typeurl/]\" class=\" animation-fade \"  title=\"[field:typename/]\">[field:typename/]</a></li>\r\n              {/dede:channel}\r\n            </ul>\r\n          </li>\r\n          ",969,2979);
+$z[1][4]=array();
+$z[1][4]['typeid']="top";
+$z[1][4]['currentstyle']="active";
+
+?>

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<meta name="author" content="order by dede58.com/" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="generator" content="dede58.com"  data-variable="/,cn,101,,2,res017" />
+<link rel='stylesheet' href='/skin/css/dede58.css'>
+</head>
+<body class="met-navfixed">
+<!--[if lte IE 8]>
+	<div class="text-center padding-top-50 padding-bottom-50 bg-blue-grey-100">
+	<p class="browserupgrade font-size-18">你正在使用一个<strong>过时</strong>的浏览器。请<a href="http://browsehappy.com/" target="_blank">升级您的浏览器</a>，以提高您的体验。</p>
+	</div>
+<![endif]--> 
+{dede:include filename="head.htm"/}
+<div class="met-banner " data-height='300||'>
+  <div class="slick-slide"> <img class="cover-image" src="/skin/img/banner{dede:field.typeid function="gettoptype(@me,id)"/}.jpg" srcset='/skin/img/banner{dede:field.typeid function="gettoptype(@me,id)"/}.jpg' sizes="(max-width: 767px) 500px" alt="">
+    <div class="banner-text p-5">
+      <div class='container'>
+        <div class='banner-text-con'>
+          <div>
+            <h1 style="color:;">{dede:field name='typename'/}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="met-news animsition ">
+  <div class="container">
+    <div class="row">
+      <ul class="service_list blocks-100 blocks-sm-2 blocks-md-3 blocks-xlg-4  clearfix">
+        {dede:channel type='son' typeid='4' row='8'  currentstyle="
+        <li class='service_item'><a href='~typelink~' >~typename~</a> </li>
+        " }
+        <li class="service_item"> <a href="[field:typeurl/]" title="[field:typename/]"> <img src="[field:typeimg/]" alt="[field:typename/]">
+          <h4>[field:typename/]</h4>
+          <p>[field:description/]</p>
+          </a> </li>
+        {/dede:channel}
+      </ul>
+    </div>
+  </div>
+</section>
+{dede:include filename="footer.htm"/}
+<button type="button" class="btn btn-icon btn-primary btn-squared met-scroll-top hide"><i class="icon wb-chevron-up" aria-hidden="true"></i></button>
+<script src="/skin/js/dede58.js"></script>
+</body>
+</html>

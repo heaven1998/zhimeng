@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<meta name="author" content="order by dede58.com/" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="generator" content="dede58.com"  data-variable="/,cn,10001,,10001,res017" />
+<link rel='stylesheet' href='/skin/css/dede58.css'>
+</head>
+<body class="met-navfixed">
+<!--[if lte IE 8]>
+	<div class="text-center padding-top-50 padding-bottom-50 bg-blue-grey-100">
+	<p class="browserupgrade font-size-18">你正在使用一个<strong>过时</strong>的浏览器。请<a href="http://browsehappy.com/" target="_blank">升级您的浏览器</a>，以提高您的体验。</p>
+	</div>
+<![endif]--> 
+{dede:include filename="head.htm"/}
+<div class="met-banner " data-height='||'> {dede:arclist titlelen=80 orderby ='pubdate' row='3' typeid='14'}
+  <div class="slick-slide"> <img class="cover-image" src="[field:picname/]" srcset='[field:picname/]' sizes="(max-width: 767px) 500px" alt="[field:title/]"></div>
+  {/dede:arclist} </div>
+{dede:channelartlist typeid='4,0'}
+<div class="met-index-service met-index-body">
+  <div class="container">
+    <h3 class="invisible" data-plugin="appear" data-animate="fade" data-repeat="false">{dede:field name='typename'/}</h3>
+    <p class="desc invisible animation-delay-100" data-plugin="appear" data-animate="fadeInDown" data-repeat="false">—— {dede:field name='typenameen'/} ——</p>
+    <p class="desc invisible animation-delay-200" data-plugin="appear" data-animate="fadeInDown" data-repeat="false">{dede:field name='description'/}</p>
+    <div class="slider invisible animation-delay-300" data-plugin="appear" data-animate="slide-bottom" data-repeat="false" id="serviceSlick" data-show="1 2 4 4 "> {dede:channel type='son'}
+      <div class="service_item"> <a href="[field:typeurl/]" title="[field:typename/]"> <img class="img-responsive" alt="[field:typename/]" src="[field:typeimg/]" />
+        <h4>[field:typename/]</h4>
+        <p>[field:description/]</p>
+        </a> </div>
+      {/dede:channel} </div>
+  </div>
+</div>
+{/dede:channelartlist} 
+{dede:channelartlist typeid='1,0'}
+<div class="met-index-product met-index-body">
+  <div class="container">
+    <h3 class="invisible" data-plugin="appear" data-animate="fade" data-repeat="false">{dede:field name='typename'/}</h3>
+    <p class="desc invisible animation-delay-100" data-plugin="appear" data-animate="fadeInDown" data-repeat="false">—— {dede:field name='typenameen'/}——</p>
+    <p class="desc invisible animation-delay-200" data-plugin="appear" data-animate="fadeInDown" data-repeat="false">{dede:field name='description'/}</p>
+    <div class='invisible animation-delay-300' data-plugin="appear" data-animate="fadeInUp" data-repeat="false">
+      <ul class="nav nav-tabs">
+        {dede:channel type='son'}
+        <li> <a href="[field:typeurl/]" title="[field:typename/]">[field:typename/]</a> </li>
+        {/dede:channel}
+      </ul>
+    </div>
+    <div class="slider index_product animation-delay-400" id="product_list" data-show="1 2 4 4 " data-plugin="appear" data-animate="slide-bottom" data-repeat="false" > {dede:arclist titlelen=80 orderby ='pubdate'}
+      <div data-type="list_113" >
+        <div class="widget widget-shadow">
+          <figure class="widget-header cover"> <a href="[field:arcurl/]" title="[field:title/]" target='_self'>
+            <div class="mask"> </div>
+            <img class="img-responsive" alt="[field:title/]" src="[field:picname/]"/> </a> </figure>
+          <h4 class="widget-title"> <a href="[field:arcurl/]" title="[field:title/]" target='_self'>[field:title/]</a>
+            <p>[field:description function="cn_substr(@me,80)"/]...</p>
+          </h4>
+        </div>
+      </div>
+      {/dede:arclist} 
+      <!-- End Example Lazy Loading --> 
+    </div>
+    <a href="{dede:field name='typeurl'/}" class="index_more"></a> <a href="{dede:field name='typeurl'/}" class="more">MORE</a> </div>
+</div>
+{/dede:channelartlist} 
+{dede:channelartlist typeid='3,0'}
+<div class="met-index-about met-index-body">
+  <div class="container ">
+    <div class="about_img col-sm-12 col-md-4 col-lg-4" data-animate="zoomIn"  data-plugin="appear" data-repeat="false"> <img data-original="{dede:field name='typeimg'/}" /></div>
+    <div class="about_cont col-sm-12 col-md-8 col-lg-8">
+      <h3 class="invisible" data-plugin="appear" data-animate="fade" data-repeat="false">{dede:field name='typename'/}</h3>
+      <p class="desc invisible animation-delay-100" data-plugin="appear" data-animate="fadeInDown" data-repeat="false" >{dede:field name='typenameen'/}</p>
+      <p class="desc invisible animation-delay-200" data-plugin="appear" data-animate="fadeInDown" data-repeat="false"></p>
+      <div class="met-editor no-gallery lazyload clearfix invisible animation-delay-300" data-plugin="appear" data-animate="fadeInDown" data-repeat="false"> {dede:sql sql='Select content from dede_arctype where id=3'}[field:content function='cn_substr(html2text(@me),800)'/] {/dede:sql} ... </div>
+      <a href="{dede:field name='typeurl'/}" class="more" data-animate="bounceIn"></a> </div>
+  </div>
+</div>
+{/dede:channelartlist}
+<!--
+<div class="met-index-team met-index-body">
+  <div class="team_bg"> <img src="/skin/img/1484739112.jpg" class="bg_img">
+    <div class="container ">
+      <div class="slider" id="exampleResponsive"> {dede:arclist titlelen=80 orderby ='pubdate' row='6' typeid='15'}
+        <div class="team_item"   > <a href="[field:arcurl/]"><img src="[field:picname/]" alt=""></a>
+          <div class="team_cont">
+            <p class="team_title">[field:title/]</p>
+            <p class="team_keywords">[field:shorttitle/]</p>
+            <p class="team_desc">[field:description function="cn_substr(@me,180)"/]...</p>
+            <a href="[field:arcurl/]" class="team_more">MORE</a> </div>
+        </div>
+        {/dede:arclist} </div>
+    </div>
+  </div>
+</div>--> 
+
+<!--产品展示-->
+{dede:channelartlist typeid='44,0'}
+<div class="met-index-product met-index-body">
+  <div class="container">
+    <h3 class="invisible" data-plugin="appear" data-animate="fade" data-repeat="false">{dede:field name='typename'/}</h3>
+    <p class="desc invisible animation-delay-100" data-plugin="appear" data-animate="fadeInDown" data-repeat="false">—— {dede:field name='typenameen'/}——</p>
+    <p class="desc invisible animation-delay-200" data-plugin="appear" data-animate="fadeInDown" data-repeat="false">{dede:field name='description'/}</p>
+    <div class='invisible animation-delay-300' data-plugin="appear" data-animate="fadeInUp" data-repeat="false">
+       <ul class="nav nav-tabs ">
+        {dede:channel type='son'}
+        <li> 
+		<a href="[field:typeurl/]" title="[field:typename/]">[field:typename/]</a>
+         </li>
+        {/dede:channel}		
+     </ul>
+      <ul class="nav nav-tabs " style='margin-top:-10px;'>
+        {dede:channel type='son' row='4'}
+        <li> 
+		<img  alt="[field:typename/]" src="[field:typeimg/]"  style='width:98.2%; height:200px;margin-right:5px;'/>
+		<a href="[field:typeurl/]" title="[field:typename/]">[field:typename/]</a> 
+         </li>
+        {/dede:channel}		
+      </ul>
+    </div>
+   <!-- <div class="slider index_product animation-delay-400" id="product_list" data-show="1 2 4 4 " data-plugin="appear" data-animate="slide-bottom" data-repeat="false" > {dede:arclist titlelen=80 orderby ='pubdate'}
+      <div data-type="list_113" >
+        <div class="widget widget-shadow">
+          <figure class="widget-header cover"> <a href="[field:arcurl/]" title="[field:title/]" target='_self'>
+            <div class="mask"> </div>
+            <img class="img-responsive" alt="[field:title/]" src="[field:picname/]"/> </a> </figure>
+          <h4 class="widget-title"> <a href="[field:arcurl/]" title="[field:title/]" target='_self'>[field:title/]</a>
+            <p>[field:description function="cn_substr(@me,80)"/]...</p>
+          </h4>
+        </div>
+      </div>
+      {/dede:arclist} 
+	   End Example Lazy Loading 
+    </div>--> 
+    <a href="{dede:field name='typeurl'/}" class="index_more" style='margin-top:15px;'></a> <a href="{dede:field name='typeurl'/}" class="more">MORE</a> </div>
+</div>
+{/dede:channelartlist} 
+
+<!--简介-->
+
+{dede:channelartlist typeid='28,0'}
+<div class="met-index-about met-index-body">
+  <div class="container ">
+    <div class="about_img col-sm-12 col-md-4 col-lg-4" data-animate="zoomIn"  data-plugin="appear" data-repeat="false"> <img data-original="{dede:field name='typeimg'/}" /></div>
+    <div class="about_cont col-sm-12 col-md-8 col-lg-8">
+      <h3 class="invisible" data-plugin="appear" data-animate="fade" data-repeat="false">{dede:field name='typename'/}</h3>
+      <p class="desc invisible animation-delay-100" data-plugin="appear" data-animate="fadeInDown" data-repeat="false" >{dede:field name='typenameen'/}</p>
+      <p class="desc invisible animation-delay-200" data-plugin="appear" data-animate="fadeInDown" data-repeat="false"></p>
+      <div class="met-editor no-gallery lazyload clearfix invisible animation-delay-300" data-plugin="appear" data-animate="fadeInDown" data-repeat="false"> {dede:sql sql='Select content from dede_arctype where id=3'}[field:content function='cn_substr(html2text(@me),800)'/] {/dede:sql} ... </div>
+      <a href="{dede:field name='typeurl'/}" class="more" data-animate="bounceIn"></a> </div>
+  </div>
+</div>
+{/dede:channelartlist}
+
+<!--技术-->
+{dede:channelartlist typeid='31,0'}
+<div class="met-index-product met-index-body">
+  <div class="container">
+    <h3 class="invisible" data-plugin="appear" data-animate="fade" data-repeat="false">{dede:field name='typename'/}</h3>
+    <p class="desc invisible animation-delay-100" data-plugin="appear" data-animate="fadeInDown" data-repeat="false">—— {dede:field name='typenameen'/}——</p>
+    <p class="desc invisible animation-delay-200" data-plugin="appear" data-animate="fadeInDown" data-repeat="false">{dede:field name='description'/}</p>
+    <div class='invisible animation-delay-300' data-plugin="appear" data-animate="fadeInUp" data-repeat="false">
+      
+	  <ul class="nav nav-tabs ">
+        {dede:channel type='son'}
+        <li> 
+		<img  alt="[field:typename/]" src="[field:typeimg/]"  style='width:98.2%; height:200px;margin-right:5px;'/>
+		<a href="[field:typeurl/]" title="[field:typename/]">[field:typename/]</a> </li>
+        {/dede:channel}		
+      </ul>
+    </div>
+    <div class="slider index_product animation-delay-400" id="product_list1" data-show="1 2 4 4 " data-plugin="appear" data-animate="slide-bottom" data-repeat="false" > {dede:arclist titlelen=80 orderby ='pubdate'}
+     <!-- <div data-type="list_113" style="width: 335px; float:left;display:black;" >
+        <div class="widget widget-shadow">
+          <figure class="widget-header cover"> <a href="[field:arcurl/]" title="[field:title/]" target='_self'>
+            <div class="mask"> </div>
+            <img class="img-responsive" alt="[field:title/]" src="[field:picname/]" /> </a> </figure>
+			<h4 class="widget-title"> <a href="[field:arcurl/]" title="[field:title/]" target='_self'>[field:title/]</a>
+            <p>[field:description function="cn_substr(@me,80)"/]...</p>
+          </h4>
+        </div>
+      </div>
+      {/dede:arclist} 
+      <!-- End Example Lazy Loading 
+    </div>--> 
+    <a href="{dede:field name='typeurl'/}" class="index_more"></a> <a href="{dede:field name='typeurl'/}" class="more">MORE</a> </div>
+</div>
+{/dede:channelartlist} 
+
+
+<!-- 咨询中心--> 
+{dede:channelartlist typeid='11,0'}
+<div class="met-index-news met-index-body">
+  <div class="container">
+    <h3 class="invisible" data-plugin="appear" data-animate="fade" data-repeat="false">{dede:field name='typename'/}</h3>
+    <p class="desc invisible animation-delay-100" data-plugin="appear" data-animate="fadeInDown" data-repeat="false">—— {dede:field name='typenameen'/} ——</p>
+    <p class="desc invisible animation-delay-200" data-plugin="appear" data-animate="fadeInDown" data-repeat="false">{dede:field name='description'/}</p>
+    <ul class="blocks-2" data-scale='0.6'>
+      {dede:arclist titlelen=80 orderby ='pubdate' row='6'}
+      <li class="invisible animation-delay-300" data-plugin="appear" data-animate="fadeInRight" data-repeat="false">
+        <div class="media media-lg">
+          <div class="media-body">
+            <h4 class="media-heading"> <span class="news_time">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span> <a href="[field:arcurl/]" title="[field:title/]" target='_self' > [field:title/]</a> </h4>
+            <p class="des">[field:description function="cn_substr(@me,180)"/]...</p>
+            <p class="info"> </p>
+          </div>
+        </div>
+      </li>
+      {/dede:arclist}
+    </ul>
+    <a href="{dede:field name='typeurl'/}"  class="more" title="{dede:field name='typename'/}" target='_self'></a> </div>
+</div>
+{/dede:channelartlist}
+<div class="met-links text-center">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li>友情链接 :</li>
+      {dede:flink row='24'/}
+    </ol>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+<button type="button" class="btn btn-icon btn-primary btn-squared met-scroll-top hide"><i class="icon wb-chevron-up" aria-hidden="true"></i></button>
+<script src="/skin/js/dede58.js"></script>
+</body>
+</html>

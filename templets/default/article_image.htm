@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<meta name="author" content="order by dede58.com/" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="generator" content="dede58.com"  data-variable="/,cn,113,27,3,res017" />
+<link rel='stylesheet' href='/skin/css/dede58.css'>
+</head>
+<body class="met-navfixed">
+<!--[if lte IE 8]>
+	<div class="text-center padding-top-50 padding-bottom-50 bg-blue-grey-100">
+	<p class="browserupgrade font-size-18">你正在使用一个<strong>过时</strong>的浏览器。请<a href="http://browsehappy.com/" target="_blank">升级您的浏览器</a>，以提高您的体验。</p>
+	</div>
+<![endif]--> 
+{dede:include filename="head.htm"/}
+<div class="met-position  pattern-show">
+  <div class="container">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li> {dede:field name='position'/}</li>
+      </ol>
+    </div>
+  </div>
+</div>
+<div class="page met-showproduct pagetype1 animsition">
+  <div class="met-showproduct-head">
+    <div class="container grey-box">
+      <div class="row">
+        <div class="col-md-7">
+          <div class='met-showproduct-list text-center fnGallery ' id="met-imgs-carousel"><!--兼容商城V3--> 
+            {dede:productimagelist}
+            <div class='slick-slide lg-item-box' data-src="[field:imgsrc/]" data-exthumbimage="[field:imgsrc/]"> <span> <img src="[field:imgsrc/]" data-src='[field:imgsrc/]' class="img-responsive" alt="[field:text/]" /> </span> </div>
+            {/dede:productimagelist} </div>
+        </div>
+        <div class="visible-xs-block visible-sm-block height-20"></div>
+        <div class="col-md-5 product-intro">
+          <h1>{dede:field.title/}</h1>
+          <p class="description">{dede:field.description/}</p>
+          <div class="tools"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="met-showproduct-body">
+    <div class="container">
+      <div class="row no-space">
+        <div class="col-md-9 product-content-body">
+          <div class="row">
+            <div class="panel product-detail">
+              <div class="panel-body">
+                <ul class="nav nav-tabs nav-tabs-line met-showproduct-navtabs affix-nav">
+                  <li class="active"><a data-toggle="tab" href="#product-details" data-get="product-details">详细信息</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane met-editor lazyload clearfix  active" id="product-details">
+                    <div> {dede:field.body/}
+                      <p><br/>
+                      </p>
+                      <div id="metinfo_additional"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!--右侧开始-->
+        <div class="col-md-3">
+          <div class="row">
+            <div class="panel product-hot">
+              <div class="panel-body">
+                <h2 class="margin-bottom-15 font-size-16 font-weight-300">热门推荐</h2>
+                <ul class="blocks-2 blocks-sm-3 mob-masonry" data-scale='1'>
+                  {dede:arclist titlelen=80 orderby ='pubdate' flag='c' row='4' typeid='1'}
+                  <li> <a href="[field:arcurl/]" target="_blank" class="img" title="[field:title/]"> <img data-original="[field:picname/]" class="cover-image" style='height:200px;' alt="[field:title/]"> </a> <a href="[field:arcurl/]" target="_blank" class="txt" title="[field:title/]">[field:title/]</a> </li>
+                  {/dede:arclist}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--右侧结束--> 
+        
+      </div>
+    </div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+<button type="button" class="btn btn-icon btn-primary btn-squared met-scroll-top hide"><i class="icon wb-chevron-up" aria-hidden="true"></i></button>
+<script src="/skin/js/dede58.js"></script>
+</body>
+</html>

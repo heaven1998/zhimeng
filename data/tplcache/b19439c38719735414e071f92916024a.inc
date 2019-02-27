@@ -1,0 +1,38 @@
+<div class="met-index-product met-index-body">
+  <div class="container">
+    <h3 class="invisible" data-plugin="appear" data-animate="fade" data-repeat="false">{dede:field name='typename'/}</h3>
+    <p class="desc invisible animation-delay-100" data-plugin="appear" data-animate="fadeInDown" data-repeat="false">—— {dede:field name='typenameen'/}——</p>
+    <p class="desc invisible animation-delay-200" data-plugin="appear" data-animate="fadeInDown" data-repeat="false">{dede:field name='description'/}</p>
+    <div class='invisible animation-delay-300' data-plugin="appear" data-animate="fadeInUp" data-repeat="false">
+       <ul class="nav nav-tabs ">
+        {dede:channel type='son'}
+        <li> 
+		<a href="[field:typeurl/]" title="[field:typename/]">[field:typename/]</a>
+         </li>
+        {/dede:channel}		
+     </ul>
+      <ul class="nav nav-tabs ">
+        {dede:channel type='son' row='4'}
+        <li> 
+		<img  alt="[field:typename/]" src="[field:typeimg/]"  style='width:98.2%; height:200px;margin-right:5px;'/>
+		<a href="[field:typeurl/]" title="[field:typename/]">[field:typename/]</a> 
+         </li>
+        {/dede:channel}		
+      </ul>
+    </div>
+   <!-- <div class="slider index_product animation-delay-400" id="product_list" data-show="1 2 4 4 " data-plugin="appear" data-animate="slide-bottom" data-repeat="false" > {dede:arclist titlelen=80 orderby ='pubdate'}
+      <div data-type="list_113" >
+        <div class="widget widget-shadow">
+          <figure class="widget-header cover"> <a href="[field:arcurl/]" title="[field:title/]" target='_self'>
+            <div class="mask"> </div>
+            <img class="img-responsive" alt="[field:title/]" src="[field:picname/]"/> </a> </figure>
+          <h4 class="widget-title"> <a href="[field:arcurl/]" title="[field:title/]" target='_self'>[field:title/]</a>
+            <p>[field:description function="cn_substr(@me,80)"/]...</p>
+          </h4>
+        </div>
+      </div>
+      {/dede:arclist} 
+	   End Example Lazy Loading 
+    </div>--> 
+    <a href="{dede:field name='typeurl'/}" class="index_more" style='margin-top:10px;'></a> <a href="{dede:field name='typeurl'/}" class="more">MORE</a> </div>
+</div>
